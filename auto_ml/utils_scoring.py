@@ -105,10 +105,10 @@ def calculate_and_print_differences(predictions, actuals, name=None):
     print(len(neg_differences))
     if len(pos_differences) > 0:
         print('Average positive difference:')
-        print(sum(pos_differences) * 1.0 / len(pos_differences))
+        print(np.mean(pos_differences))
     if len(neg_differences) > 0:
         print('Average negative difference:')
-        print(sum(neg_differences) * 1.0 / len(neg_differences))
+        print(np.mean(neg_differences))
 
 
 def advanced_scoring_regressors(predictions, actuals, verbose=2, name=None):
